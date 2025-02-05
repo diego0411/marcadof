@@ -71,7 +71,7 @@ const Records = () => {
 
     try {
       await axios.post(
-        "https://marcado-production.up.railway.app/schedule//schedule",
+        "https://marcado-production.up.railway.app/schedule/set",
         { arrivalTime, departureTime },
         { headers: { Authorization: `Bearer ${token}` } }
       );
