@@ -28,7 +28,7 @@ const Register = () => {
 
     try {
       // Envío de datos al backend
-      const response = await axios.post("https://marcado-production.up.railway.app", {
+      const response = await axios.post("https://marcado-production.up.railway.app/auth/register", {
         name,
         email,
         password,
