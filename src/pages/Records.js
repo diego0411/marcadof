@@ -19,7 +19,7 @@ const Records = () => {
   const token = localStorage.getItem("token");
   const role = localStorage.getItem("role"); // ✅ Obtener el rol del usuario
 
-  // Función para obtener registros desde el backend
+  // ✅ Función para obtener registros desde el backend
   const fetchRecords = async () => {
     if (!token) {
       console.error("No tienes sesión activa. Inicia sesión.");
@@ -41,7 +41,7 @@ const Records = () => {
     }
   };
 
-  // Cargar registros al montar el componente
+  // ✅ Cargar registros al montar el componente
   useEffect(() => {
     fetchRecords();
   }, [token, role]);
@@ -61,7 +61,7 @@ const Records = () => {
         Actualizar Registros
       </Button>
 
-      {/* Si no hay registros, mostramos un aviso */}
+      {/* ✅ Si no hay registros, mostramos un aviso */}
       {records.length === 0 ? (
         <Typography>No hay registros disponibles</Typography>
       ) : (
@@ -74,6 +74,7 @@ const Records = () => {
                 <TableCell>Fecha</TableCell>
                 <TableCell>Latitud</TableCell>
                 <TableCell>Longitud</TableCell>
+                <TableCell>Status</TableCell> {/* ✅ Nueva columna Status */}
               </TableRow>
             </TableHead>
             <TableBody>
@@ -86,6 +87,7 @@ const Records = () => {
                   </TableCell>
                   <TableCell>{record.lat}</TableCell>
                   <TableCell>{record.lng}</TableCell>
+                  <TableCell>{record.status}</TableCell> {/* ✅ Se muestra el status */}
                 </TableRow>
               ))}
             </TableBody>
@@ -93,7 +95,7 @@ const Records = () => {
         </TableContainer>
       )}
 
-      {/* Sección para exportar reportes */}
+      {/* ✅ Sección para exportar reportes */}
       <Paper
         elevation={3}
         sx={{ marginTop: 4, padding: 2, textAlign: "center" }}

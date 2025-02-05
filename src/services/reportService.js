@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5001/export"; // Asegurar que esta ruta es correcta
+const API_URL = "https://marcado-production.up.railway.app/export"; // Asegurar que esta ruta es correcta
 
 export const downloadReport = async (type) => {
   const token = localStorage.getItem("token");
