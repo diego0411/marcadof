@@ -28,7 +28,7 @@ const Register = () => {
 
     try {
       // Envío de datos al backend
-      const response = await axios.post("http://localhost:5001/auth/register", {
+      const response = await axios.post("https://marcado-production.up.railway.app", {
         name,
         email,
         password,

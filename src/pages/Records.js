@@ -29,8 +29,8 @@ const Records = () => {
     try {
       const url =
         role === "ADMIN"
-          ? "http://localhost:5001/marking/all-records" // ✅ Nueva ruta para admin
-          : "http://localhost:5001/marking/records"; // ✅ Ruta para usuarios normales
+          ? "https://marcado-production.up.railway.app/marking/all-records" // ✅ Nueva ruta para admin
+          : "https://marcado-production.up.railway.app/marking/records"; // ✅ Ruta para usuarios normales
 
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${token}` },

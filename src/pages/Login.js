@@ -15,7 +15,7 @@ const Login = () => {
 
     try {
       // En el backend, asegúrate de que /auth/login devuelva: { token, role }
-      const response = await axios.post("http://localhost:5001/auth/login", { email, password });
+      const response = await axios.post("https://marcado-production.up.railway.app/auth/login", { email, password });
 
       const { token, role } = response.data; 
       if (token) {

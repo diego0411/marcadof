@@ -26,7 +26,7 @@ const Marking = ({ onMarkSuccess }) => {
           const token = localStorage.getItem("token");
 
           await axios.post(
-            "http://localhost:5001/marking/mark",
+            "https://marcado-production.up.railway.app/marking/mark",
             { lat: latitude, lng: longitude },
             { headers: { Authorization: `Bearer ${token}` } }
           );
