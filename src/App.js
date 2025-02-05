@@ -6,6 +6,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Marking from "./pages/Marking";
 import Records from "./pages/Records";
+import Users from "./pages/Users";
+
 
 // Importa el layout que tiene la barra de navegación
 import LayoutWithNav from "./LayoutWithNav";
@@ -22,6 +24,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/marking" element={<Marking />} />
           <Route path="/records" element={<Records />} />
+          <Route path="/users" element={<Users />} />
         </Route>
       </Routes>
     </Router>

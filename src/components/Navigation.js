@@ -17,6 +17,7 @@ function Navigation() {
         <>
           <Link to="/records">Ver Registros</Link>
           <Link to="/register">Registrar Usuario</Link>
+          <Link to="/users">Registrar Usuario</Link>
         </>
       )}
     </nav>
