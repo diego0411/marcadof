@@ -163,6 +163,39 @@ const Records = () => {
           </Table>
         </TableContainer>
       )}
+
+      {/* ✅ Sección para exportar reportes */}
+      <Paper
+        elevation={3}
+        sx={{ marginTop: 4, padding: 2, textAlign: "center" }}
+      >
+        <Typography variant="h6" gutterBottom>
+          Exportar Reportes
+        </Typography>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => downloadReport("csv")}
+          sx={{ marginRight: 1 }}
+        >
+          Exportar CSV
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => downloadReport("pdf")}
+          sx={{ marginRight: 1 }}
+        >
+          Exportar PDF
+        </Button>
+        <Button
+          variant="contained"
+          color="success"
+          onClick={() => downloadReport("excel")}
+        >
+          Exportar Excel
+        </Button>
+      </Paper>
     </Container>
   );
 };
