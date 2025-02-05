@@ -24,10 +24,11 @@ const Marking = ({ onMarkSuccess }) => {
           setLocation({ lat: latitude, lng: longitude });
 
           const token = localStorage.getItem("token");
+          const timestamp = new Date().toISOString(); // 🔹 Enviar timestamp en UTC
 
           await axios.post(
             "https://marcado-production.up.railway.app/marking/mark",
-            { lat: latitude, lng: longitude },
+            { lat: latitude, lng: longitude, timestamp },
             { headers: { Authorization: `Bearer ${token}` } }
           );
 
