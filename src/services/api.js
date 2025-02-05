@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://marcado-production.up.railway.app", // 🔹 Asegúrate de que el backend corre en este puerto
-  withCredentials: true, // 🔹 Para enviar cookies de autenticación si son necesarias
+  baseURL: "https://marcado-production.up.railway.app", // 🔹 URL del backend en Railway
+  withCredentials: true, // 🔹 Para enviar cookies de autenticación
 });
 
 export default api;
